@@ -1,0 +1,91 @@
+---
+import Header from "../components/header/Header.astro";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/vollkorn";
+import Footer from "../components/Footer.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Software engineer student and passionate for creating beautiful and
+    functional web interfaces. Comfortable working with the latest frontend
+    technologies and frameworks like React and Vue."
+    />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://astro-portfolio-inky.vercel.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Daniel Ospina | Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Software engineer, passionate for creating beautiful and functional web interfaces. Comfortable working with the latest frontend technologies."
+    />
+    <meta property="og:image" content="/website-screenshot.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="astro-portfolio-inky.vercel.app" />
+    <meta
+      property="twitter:url"
+      content="https://astro-portfolio-inky.vercel.app/"
+    />
+    <meta
+      name="twitter:title"
+      content="Daniel Ospina | Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Software engineer, passionate for creating beautiful and functional web interfaces. Comfortable working with the latest frontend technologies."
+    />
+    <meta name="twitter:image" content="/website-screenshot.webp" />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: "Manrope Variable", sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 9999px;
+  }
+
+  /* Handle on hover */
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+  }
+</style>
