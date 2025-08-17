@@ -1,8 +1,8 @@
 <h1 align="center">Astro Portfolio</h1>
 
-[![Portfolio Vue][product-screenshot]](https://astro-portfolio-inky.vercel.app/)
+[![Portfolio Vue][product-screenshot]](https://jdportafolio.vercel.app/)
 
-<a align="center" href="https://astro-portfolio-inky.vercel.app/" target="_blank">View Demo</a>
+<a align="center" href="https://jdportafolio.vercel.app/" target="_blank">View Demo</a>
 
 ### Built With
 
